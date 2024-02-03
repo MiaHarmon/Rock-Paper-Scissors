@@ -1,0 +1,167 @@
+:root {
+    --main-color: #001ec9;
+    --second-color: #9c0508;
+    --header-font-size: 64px; 
+    --second-font-size: 30px;
+    --button-text-color: white;
+    --highlight-color: #8083db;
+}
+
+@font-face {
+    font-family: 'Vinque';
+    src: url('Fonts/vinque-rg.otf') format('truetype');
+}  
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Images/backgroundRPS.png');
+    background-size: 100% 100%;
+    background-position: center; 
+    opacity: 0.4; 
+    z-index: -1;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+}
+
+body {
+    font-family: 'Vinque', cursive;
+
+}
+
+.header {
+    text-align: center;
+    color: var(--main-color);
+
+}
+
+h1.header {
+    font-size: var(--header-font-size);
+
+}
+
+p.header {
+    font-size: var(--second-font-size);
+}
+
+
+#game-container {
+    position: relative;
+    width: 500px; 
+    height: auto; 
+    margin: 20px auto; 
+}
+
+#choices {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#score-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    z-index: 2; 
+}
+
+#result {
+    color: var(--second-color);
+}
+
+.choice-button {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice-button:hover {
+    background-color: var(--main-color);
+}
+
+#result {
+    margin-top: 20px;
+    
+}
+
+#win-lose-result {
+    color: var(--second-color);
+    font-size: var(--second-font-size);
+}
+
+#score {
+    margin-top: 20px;
+    color: var(--main-color);
+    font-size: var(--second-font-size);
+
+}
+
+/* Highlight effect for computer's choice */
+.choice-highlight {
+    animation: highlightFade 10s forwards;
+}
+
+@keyframes highlightFade {
+    0% {
+        background-color: var(--highlight-color);
+    }
+    100% {
+        background-color: var(--main-color); 
+    }
+}  
+
+#reset-button {
+    margin-top: 60px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
+    color: var(--button-text-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-button:hover {
+    background-color: var(--second-color);
+}
+
+
+/* Circular arrangement for buttons */
+.choice-button:nth-child(1) { transform: rotate(0deg) translate(240px) rotate(0deg); }
+.choice-button:nth-child(2) { transform: rotate(24deg) translate(240px) rotate(-24deg); }
+.choice-button:nth-child(3) { transform: rotate(48deg) translate(240px) rotate(-48deg); }
+.choice-button:nth-child(4) { transform: rotate(72deg) translate(240px) rotate(-72deg); }  
+.choice-button:nth-child(5) { transform: rotate(96deg) translate(240px) rotate(-96deg); }
+.choice-button:nth-child(6) { transform: rotate(120deg) translate(240px) rotate(-120deg); }
+.choice-button:nth-child(7) { transform: rotate(144deg) translate(240px) rotate(-144deg); }
+.choice-button:nth-child(8) { transform: rotate(168deg) translate(240px) rotate(-168deg); }
+.choice-button:nth-child(9) { transform: rotate(192deg) translate(240px) rotate(-192deg); }
+.choice-button:nth-child(10) { transform: rotate(216deg) translate(240px) rotate(-216deg); }
+.choice-button:nth-child(11) { transform: rotate(240deg) translate(240px) rotate(-240deg); }
+.choice-button:nth-child(12) { transform: rotate(264deg) translate(240px) rotate(-264deg); }
+.choice-button:nth-child(13) { transform: rotate(288deg) translate(240px) rotate(-288deg); }
+.choice-button:nth-child(14) { transform: rotate(312deg) translate(240px) rotate(-312deg); }
+.choice-button:nth-child(15) { transform: rotate(336deg) translate(240px) rotate(-336deg); }  
