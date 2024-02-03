@@ -92,6 +92,8 @@ p.header {
     background-color: var(--second-color);
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'Vinque', cursive;
+
 }
 
 .choice-button:hover {
@@ -142,6 +144,7 @@ p.header {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'Vinque', cursive;
 }
 
 #reset-button:hover {
