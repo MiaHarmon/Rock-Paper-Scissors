@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elemental Clash: The Epic Showdown</title>
+    <title>Elemental Clash</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to Elemental Clash: The Epic Showdown!</h1>
-    <p>This new form of Rock, Paper, Scissors introduces a new level of challenges to users 
-        by introducing 15 choices to choose from!
+    <img class="background" src="Images/backgroundRPS.png" alt="Background Rock Paper Scissors">
+
+    <h1 class="header">Elemental Clash</h1>
+    <p class="header">This new form of Rock, Paper, Scissors introduces a new level of challenges 
+        by introducing fifteen choices to choose from!
     </p>
 
     <div id="game-container">
+    <button id="reset-button">Reset Scores</button>
+
         <div id="choices">
             <button class="choice-button" id="Rock">Rock</button>
             <button class="choice-button" id="Gun">Gun</button>
@@ -29,7 +34,9 @@
             <button class="choice-button" id="Scissors">Scissors</button>
             <button class="choice-button" id="Fire">Fire</button>
         </div>
+        
         <div id="result"></div>
+        <p> <span id="win-lose-result"></span></p>
         <div id="score">
             <p>Player Score: <span id="player-score">0</span></p>
             <p>Computer Score: <span id="computer-score">0</span></p>
